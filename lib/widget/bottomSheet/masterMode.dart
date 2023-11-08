@@ -11,8 +11,8 @@ class MasterMode extends StatefulWidget {
 
 class _MasterModeState extends State<MasterMode> {
   List<Widget> master = <Widget>[
-    Text('Используется'),
-    Text('Не используется'),
+    const Text('Используется'),
+    const Text('Не используется'),
   ];
   final List<bool> _selectedMaster = <bool>[
     true,
@@ -24,14 +24,14 @@ class _MasterModeState extends State<MasterMode> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Режим мастер',
           style: TextStyle(
               color: darkGrey, 
               fontSize: 16, 
               fontWeight: FontWeight.w500),
         ),
-        SizedBox(height: 16,),
+        const SizedBox(height: 16,),
         ToggleButtons(
           direction: vertical ? Axis.vertical : Axis.horizontal,
           onPressed: (int index) {
