@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_task/theme/theme.dart';
 import 'package:test_task/widget/Finance/financeList.dart';
-import 'package:test_task/widget/bottomSheet/maimBottomSheet.dart';
+import 'package:test_task/widget/bottomSheet/mainBottomSheet.dart';
 import 'package:test_task/widget/downloadsMain.dart';
 import 'package:test_task/widget/events/listTitle.dart';
 import 'package:test_task/widget/main_widget.dart';
