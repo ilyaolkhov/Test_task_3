@@ -102,8 +102,15 @@ class _PriceListState extends State<PriceList> {
                           width: 60,
                           height: 45,
                           child: Center(
-                            child: TextFormField( textAlignVertical: TextAlignVertical.center,
+                            child: TextFormField(
+                              cursorHeight: 1,
+                              cursorColor: tmnBlue,
+                              
+                              textAlign: TextAlign.center,
+                              keyboardType: TextInputType.phone,
+                              textAlignVertical: TextAlignVertical.center,
                               decoration: InputDecoration(
+                                contentPadding: const EdgeInsets.all(1),
                                 labelStyle: const TextStyle(color: midGrey),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(4),
@@ -121,9 +128,14 @@ class _PriceListState extends State<PriceList> {
                           )),
                       SizedBox(
                           width: 110,
-                          height: 40,
+                          height: 45,
                           child: TextFormField(
+                            cursorHeight: 1,
+                            cursorColor: tmnBlue,
+                            textAlign: TextAlign.center,
+                            keyboardType: TextInputType.phone,
                             decoration: InputDecoration(
+                              contentPadding: const EdgeInsets.all(1),
                               labelStyle: const TextStyle(color: midGrey),
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(4),
