@@ -100,22 +100,24 @@ class _PriceListState extends State<PriceList> {
                     children: [
                       SizedBox(
                           width: 60,
-                          height: 40,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              labelStyle: const TextStyle(color: midGrey),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(4),
-                                borderSide: const BorderSide(
-                                    width: 1, color: Color(0xFFD9E2F1)),
+                          height: 45,
+                          child: Center(
+                            child: TextFormField( textAlignVertical: TextAlignVertical.center,
+                              decoration: InputDecoration(
+                                labelStyle: const TextStyle(color: midGrey),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(4),
+                                  borderSide: const BorderSide(
+                                      width: 1, color: Color(0xFFD9E2F1)),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(4),
+                                  borderSide: const BorderSide(
+                                      width: 1, color: Color(0xFFD9E2F1)),
+                                ),
                               ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(4),
-                                borderSide: const BorderSide(
-                                    width: 1, color: Color(0xFFD9E2F1)),
-                              ),
+                              controller: _first[index],
                             ),
-                            controller: _first[index],
                           )),
                       SizedBox(
                           width: 110,
@@ -180,26 +182,9 @@ class _PriceListState extends State<PriceList> {
                   fontSize: 14, color: tmnBlue, fontWeight: FontWeight.w300)),
         ),
         const SizedBox(
-          height: 24,
+          height: 50,
         ),
-        ElevatedButton(
-          style: ButtonStyle( 
-            backgroundColor: const MaterialStatePropertyAll(tmnBlue),
-            shape: MaterialStatePropertyAll(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-            ),
-            minimumSize: const MaterialStatePropertyAll(
-              Size(double.infinity, 60),
-            ),
-          ),
-          onPressed: () {},
-          child: const Text(
-            'Сохранить изменения',
-            style: TextStyle(fontSize: 16, color: Colors.white),
-          ),
-        )
+
       ],
     );
   }

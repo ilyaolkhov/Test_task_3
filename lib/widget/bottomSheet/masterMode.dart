@@ -32,26 +32,28 @@ class _MasterModeState extends State<MasterMode> {
               fontWeight: FontWeight.w500),
         ),
         const SizedBox(height: 16,),
-        ToggleButtons(
-          direction: vertical ? Axis.vertical : Axis.horizontal,
-          onPressed: (int index) {
-            setState(() {
-              for (int i = 0; i < _selectedMaster.length; i++) {
-                _selectedMaster[i] = i == index;
-              }
-            });
-          },
-          borderRadius: const BorderRadius.all(Radius.circular(4)),
-          selectedBorderColor: tmnBlue,
-          selectedColor: Colors.white,
-          fillColor: tmnBlue,
-          color: tmnBlue,
-          disabledBorderColor: tmnBlue,
-          borderColor: tmnBlue,
-          constraints: const BoxConstraints(
-              minHeight: 40.0, minWidth: 180, maxWidth: double.infinity),
-          isSelected: _selectedMaster,
-          children: master,
+        Center(
+          child: ToggleButtons(
+            direction: vertical ? Axis.vertical : Axis.horizontal,
+            onPressed: (int index) {
+              setState(() {
+                for (int i = 0; i < _selectedMaster.length; i++) {
+                  _selectedMaster[i] = i == index;
+                }
+              });
+            },
+            borderRadius: const BorderRadius.all(Radius.circular(4)),
+            selectedBorderColor: tmnBlue,
+            selectedColor: Colors.white,
+            fillColor: tmnBlue,
+            color: tmnBlue,
+            disabledBorderColor: tmnBlue,
+            borderColor: tmnBlue,
+            constraints: const BoxConstraints(
+                minHeight: 40.0, minWidth: 180, maxWidth: double.infinity),
+            isSelected: _selectedMaster,
+            children: master,
+          ),
         ),
       ],
     );

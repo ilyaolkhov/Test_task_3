@@ -43,25 +43,49 @@ class _MainBottomSheetState extends State<MainBottomSheet> {
                       icon: Icon(Icons.close, size: 35, color: darkGrey))
                 ],
               ),
-              SizedBox(
-                height: 690,
-                child: ListView(
-                  children: [
-                    HelpWidget(),
-                    Price(),
-                    SizedBox(
-                      height: 24,
-                    ),
-                    MasterMode(),
-                    SizedBox(
-                      height: 24,
-                    ),
-                    PriceList(),
-                    SizedBox(
-                      height: 24,
-                    ),
-                  ],
+              Stack(alignment: Alignment.bottomCenter,
+                children:[
+
+                  SizedBox(
+                  height: 690,
+                  child: ListView(
+                    children: [
+                      HelpWidget(),
+                      Price(),
+                      SizedBox(
+                        height: 24,
+                      ),
+                      MasterMode(),
+                      SizedBox(
+                        height: 24,
+                      ),
+                      PriceList(),
+                      SizedBox(
+                        height: 24,
+                      ),
+
+                    ],
+                  ),
                 ),
+                  ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: const MaterialStatePropertyAll(tmnBlue),
+                      shape: MaterialStatePropertyAll(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      minimumSize: const MaterialStatePropertyAll(
+                        Size(double.infinity, 60),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      'Сохранить изменения',
+                      style: TextStyle(fontSize: 16, color: Colors.white),
+                    ),
+                  )
+          ],
               )
             ],
           ),

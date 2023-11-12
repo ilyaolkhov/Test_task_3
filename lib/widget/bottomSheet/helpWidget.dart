@@ -15,8 +15,8 @@ class _HelpWidgetState extends State<HelpWidget> {
       height: 80,
       width: double.infinity,
       decoration: BoxDecoration(color: tmnGreen.withOpacity(0.1)),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16),
+      child: const Padding(
+        padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16),
         child: Row(
           children: [
             Icon(

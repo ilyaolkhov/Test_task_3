@@ -61,7 +61,7 @@ class _PriceState extends State<Price> {
                   onChanged: (bool? newValue){
                     setState(() =>isCheck = newValue!
                     );
-                  }), Text('Включить звук', style: textFontSize16w300)
+                  }), const Text('Включить звук', style: textFontSize16w300)
                 ],
               )
         ],
