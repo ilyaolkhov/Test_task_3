@@ -105,7 +105,6 @@ class _PriceListState extends State<PriceList> {
                             child: TextFormField(
                               cursorHeight: 1,
                               cursorColor: tmnBlue,
-                              
                               textAlign: TextAlign.center,
                               keyboardType: TextInputType.phone,
                               textAlignVertical: TextAlignVertical.center,
